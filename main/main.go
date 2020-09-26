@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	a := []int{2, 7, 9, 4, 4}
-	r := problems.StoneGameII(a)
+	a := [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+	r := problems.MinFallingPathSum(a)
 	fmt.Println(r)
 }
