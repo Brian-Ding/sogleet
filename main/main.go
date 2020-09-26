@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
-	"problems"
+
+	"../problems"
 )
 
 func main() {
-	a := []int{1, 15, 7, 9, 2, 5, 10}
-	r := problems.MaxSumAfterPartitioning(a, 3)
+	a := []int{2, 7, 9, 4, 4}
+	r := problems.StoneGameII(a)
 	fmt.Println(r)
 }

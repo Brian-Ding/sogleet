@@ -1,7 +1,5 @@
 package problems
 
-import "math"
-
 func MaxProduct(ns []int) int {
 	if len(ns) == 0 {
 		return 0
@@ -15,24 +13,4 @@ func MaxProduct(ns []int) int {
 	}
 
 	return result
-}
-
-func min(vs ...int) int {
-	n := math.MaxInt64
-	for _, v := range vs {
-		if v < n {
-			n = v
-		}
-	}
-	return n
-}
-
-func max(vs ...int) int {
-	n := math.MinInt64
-	for _, v := range vs {
-		if v > n {
-			n = v
-		}
-	}
-	return n
 }
