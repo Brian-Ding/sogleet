@@ -7,7 +7,8 @@ import (
 )
 
 func main() {
-	a := [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
-	r := problems.MinFallingPathSum(a)
+	a := []int{1, 4, 6, 7, 8, 20}
+	b := []int{2, 7, 15}
+	r := problems.MincostTickets(a, b)
 	fmt.Println(r)
 }
