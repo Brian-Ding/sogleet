@@ -1,5 +1,6 @@
 package problems
 
+// LongestCommonSubsequence problem 1143
 func LongestCommonSubsequence(text1 string, text2 string) int {
 	return longestCommonSubsequence(text1, text2)
 }

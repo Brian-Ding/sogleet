@@ -1,5 +1,6 @@
 package problems
 
+// NumMatchingSubseq problem 792
 func NumMatchingSubseq(S string, words []string) int {
 	return numMatchingSubseq(S, words)
 }

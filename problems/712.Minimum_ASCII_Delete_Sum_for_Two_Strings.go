@@ -1,5 +1,6 @@
 package problems
 
+// MinimumDeleteSum problem 712
 func MinimumDeleteSum(s1 string, s2 string) int {
 	return minimumDeleteSum(s1, s2)
 }

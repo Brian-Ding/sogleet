@@ -1,5 +1,7 @@
 package problems
 
+// DetectCycle problem 142
+// not pass
 func DetectCycle(head *ListNode) *ListNode {
 	return detectCycle(head)
 }

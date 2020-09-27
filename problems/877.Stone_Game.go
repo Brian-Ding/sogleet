@@ -4,6 +4,7 @@ import (
 	"math"
 )
 
+// StoneGame problem 877
 func StoneGame(piles []int) bool {
 	return stoneGame(piles)
 }

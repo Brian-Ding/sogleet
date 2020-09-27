@@ -1,5 +1,6 @@
 package problems
 
+// CountBits problem 338
 func CountBits(num int) []int {
 	return countBits(num)
 }

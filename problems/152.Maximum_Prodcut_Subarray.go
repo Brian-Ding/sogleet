@@ -1,6 +1,11 @@
 package problems
 
+// MaxProduct problem 152
 func MaxProduct(ns []int) int {
+	return maxProduct(ns)
+}
+
+func maxProduct(ns []int) int {
 	if len(ns) == 0 {
 		return 0
 	}

@@ -4,6 +4,7 @@ import (
 	"math"
 )
 
+// CountSquares problem 1277
 func CountSquares(matrix [][]int) int {
 	return countSquares(matrix)
 }

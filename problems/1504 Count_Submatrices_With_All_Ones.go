@@ -4,6 +4,7 @@ package problems
 Given a rows * columns matrix mat of ones and zeros, return how many submatrices have all ones.
 */
 
+// NumSubmat problem 1504
 func NumSubmat(mat [][]int) int {
 	return numSubmat(mat)
 }

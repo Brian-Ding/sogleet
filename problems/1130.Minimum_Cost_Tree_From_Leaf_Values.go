@@ -2,10 +2,12 @@ package problems
 
 import "fmt"
 
+// MctFromLeafValues problem 1130
 func MctFromLeafValues(arr []int) int {
 	return mctFromLeafValues(arr)
 }
 
+// Stack type
 type Stack []int
 
 func mctFromLeafValues(arr []int) int {

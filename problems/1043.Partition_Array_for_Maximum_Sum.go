@@ -4,6 +4,7 @@ import (
 	"math"
 )
 
+// MaxSumAfterPartitioning problem 1043
 func MaxSumAfterPartitioning(arr []int, k int) int {
 	return maxSumAfterPartitioning(arr, k)
 }

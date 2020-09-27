@@ -15,6 +15,7 @@ For example, if we get a 7-day pass on day 2, then we can travel for 7 days: day
 Return the minimum number of dollars you need to travel every day in the given list of days.
 */
 
+// MincostTickets problem 983
 func MincostTickets(days []int, costs []int) int {
 	return mincostTickets(days, costs)
 }

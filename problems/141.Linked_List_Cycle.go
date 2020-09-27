@@ -4,6 +4,7 @@ import (
 	"math"
 )
 
+// HasCycle problem 141
 func HasCycle(head *ListNode) bool {
 	return hasCycle(head)
 }

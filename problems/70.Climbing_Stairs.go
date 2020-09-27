@@ -1,5 +1,6 @@
 package problems
 
+// ClimbStairs problem 70
 func ClimbStairs(n int) int {
 	return climbStairs(n)
 }

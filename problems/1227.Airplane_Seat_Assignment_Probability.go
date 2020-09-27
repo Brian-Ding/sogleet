@@ -1,5 +1,6 @@
 package problems
 
+// NthPersonGetsNthSeat problem 1227
 func NthPersonGetsNthSeat(n int) float64 {
 	return nthPersonGetsNthSeat(n)
 }

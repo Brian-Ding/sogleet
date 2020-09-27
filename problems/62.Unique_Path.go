@@ -1,5 +1,10 @@
 package problems
 
+// UniquePaths problem 62
+func UniquePaths(m int, n int) int {
+	return uniquePaths(m, n)
+}
+
 func uniquePaths(m int, n int) int {
 	// row: m
 	// column: n

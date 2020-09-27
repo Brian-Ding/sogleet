@@ -1,5 +1,6 @@
 package problems
 
+// SwapPairs problem 24
 func SwapPairs(head *ListNode) *ListNode {
 	return swapPairs(head)
 }

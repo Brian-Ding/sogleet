@@ -2,6 +2,7 @@ package problems
 
 import "math"
 
+// ListNode given by leetcode
 type ListNode struct {
 	Val  int
 	Next *ListNode

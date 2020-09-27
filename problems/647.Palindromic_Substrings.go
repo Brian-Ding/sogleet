@@ -1,5 +1,6 @@
 package problems
 
+// CountSubstrings problem 647
 func CountSubstrings(s string) int {
 	return countSubstrings(s)
 }

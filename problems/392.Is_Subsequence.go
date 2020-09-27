@@ -1,6 +1,11 @@
 package problems
 
+// IsSubsequence problem 392
 func IsSubsequence(s string, t string) bool {
+	return isSubsequence(s, t)
+}
+
+func isSubsequence(s string, t string) bool {
 	if s == "" {
 		return true
 	}

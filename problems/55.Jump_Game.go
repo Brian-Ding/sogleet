@@ -1,6 +1,11 @@
 package problems
 
+// CanJump problem 55
 func CanJump(nums []int) bool {
+	return canJump(nums)
+}
+
+func canJump(nums []int) bool {
 	reach := make([]bool, len(nums))
 	reach[0] = true
 	for i := 0; i < len(nums); i++ {

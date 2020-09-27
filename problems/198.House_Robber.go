@@ -4,7 +4,12 @@ import (
 	"math"
 )
 
+// Rob problem 198
 func Rob(nums []int) int {
+	return rob(nums)
+}
+
+func rob(nums []int) int {
 	if len(nums) == 0 {
 		return 0
 	}
