@@ -7,8 +7,7 @@ import (
 )
 
 func main() {
-	a := "delete"
-	b := "leet"
-	r := problems.LongestCommonSubsequence(a, b)
+	a := []int{1, 2, 3, 4}
+	r := problems.NumberOfArithmeticSlices(a)
 	fmt.Println(r)
 }
