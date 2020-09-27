@@ -9,6 +9,6 @@ import (
 func main() {
 	a := "delete"
 	b := "leet"
-	r := problems.MinimumDeleteSum(a, b)
+	r := problems.LongestCommonSubsequence(a, b)
 	fmt.Println(r)
 }
