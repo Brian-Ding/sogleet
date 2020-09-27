@@ -7,7 +7,8 @@ import (
 )
 
 func main() {
-	a := "aabaaa"
-	r := problems.CountSubstrings(a)
+	a := "delete"
+	b := "leet"
+	r := problems.MinimumDeleteSum(a, b)
 	fmt.Println(r)
 }
