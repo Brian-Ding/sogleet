@@ -21,46 +21,47 @@ func MincostTickets(days []int, costs []int) int {
 
 func mincostTickets(days []int, costs []int) int {
 	row := len(days)
-	column := len(days)
-	array := newArray(row, column, 0)
-	array[row-1][row-1] = costs[0]
+	array := make([]int, 0, row)
+	for i := 0; i < row; i++ {
+		array = append(array, 0)
+	}
+	array[row-1] = min(costs[0], costs[1], costs[2])
 
 	for i := row - 2; i >= 0; i-- {
-		next1DayIndex := i + 1
-		next7DayIndex := i + 1
-		next30DayIndex := i + 1
+		next7DayIndex := -1
+		next30DayIndex := -1
 
 		// buy 1-day pass on day i
-		temp := costs[0] + array[i+1][row-1]
+		temp := costs[0] + array[i+1]
 
 		// buy 7-day pass on day i
-		for j := next1DayIndex; j < row; j++ {
-			if days[i]+7 < days[j] {
-				next7DayIndex = j + 1
+		for j := i + 1; j < row; j++ {
+			if days[i]+7 <= days[j] { // first day that 7-day pass does not work
+				next7DayIndex = j
 				break
 			}
 		}
-		if next7DayIndex >= row {
+		if next7DayIndex == -1 { // 7-day pass works until the end
 			temp = min(temp, costs[1])
 		} else {
-			temp = min(temp, costs[1]+array[next7DayIndex][row-1])
+			temp = min(temp, costs[1]+array[next7DayIndex])
 		}
 
 		// buy 30-day pass on day i
-		for j := next7DayIndex; j < row; j++ {
-			if days[i]+30 < days[j] {
-				next30DayIndex = j + 1
+		for j := i + 1; j < row; j++ { // first day that 30-day pass does not work
+			if days[i]+30 <= days[j] {
+				next30DayIndex = j
 				break
 			}
 		}
-		if next30DayIndex >= row {
+		if next30DayIndex == -1 { // 30-day pass works until the end
 			temp = min(temp, costs[2])
 		} else {
-			temp = min(temp, costs[2]+array[next30DayIndex][row-1])
+			temp = min(temp, costs[2]+array[next30DayIndex])
 		}
 
-		array[i][row-1] = temp
+		array[i] = temp
 	}
 
-	return array[0][row-1]
+	return array[0]
 }
