@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	a := [][]int{{1, 3, 1}, {1, 5, 1}, {4, 2, 1}}
-	r := problems.MinPathSum(a)
+	a := []string{"sgtnz", "sgtz", "sgz", "ikrcyoglz", "ajelpkpx", "ajelpkpxm", "srqgtnz", "srqgotnz", "srgtnz", "ijkrcyoglz"}
+	r := problems.LongestStrChain(a)
 	fmt.Println(r)
 }
