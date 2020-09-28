@@ -7,8 +7,7 @@ import (
 )
 
 func main() {
-	a := [][]int{{1, 1}, {2, 3}, {2, 3}, {1, 1}, {1, 1}, {1, 1}, {1, 2}}
-	b := 4
-	r := problems.MinHeightShelves(a, b)
+	a := [][]int{{1, 3, 1}, {1, 5, 1}, {4, 2, 1}}
+	r := problems.MinPathSum(a)
 	fmt.Println(r)
 }
