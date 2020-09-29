@@ -44,6 +44,7 @@ func longestStrChain(words []string) int {
 	return result[len(result)-1]
 }
 
+// ByLength sort string slice
 type ByLength []string
 
 func (s ByLength) Len() int {
