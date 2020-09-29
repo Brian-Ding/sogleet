@@ -2,6 +2,13 @@ package problems
 
 import "math"
 
+// TreeNode given by leetcode
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
+
 // ListNode given by leetcode
 type ListNode struct {
 	Val  int

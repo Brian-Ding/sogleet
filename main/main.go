@@ -7,7 +7,6 @@ import (
 )
 
 func main() {
-	a := []string{"sgtnz", "sgtz", "sgz", "ikrcyoglz", "ajelpkpx", "ajelpkpxm", "srqgtnz", "srqgotnz", "srgtnz", "ijkrcyoglz"}
-	r := problems.LongestStrChain(a)
+	r := problems.LongestZigZag()
 	fmt.Println(r)
 }
