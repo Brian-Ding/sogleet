@@ -7,6 +7,6 @@ import (
 )
 
 func main() {
-	r := problems.LongestZigZag()
+	r := problems.NumTrees()
 	fmt.Println(r)
 }
