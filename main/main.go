@@ -7,6 +7,6 @@ import (
 )
 
 func main() {
-	r := problems.NumTrees()
+	r := problems.FindLongestChain()
 	fmt.Println(r)
 }
