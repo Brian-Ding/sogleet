@@ -13,8 +13,10 @@ func longestArithSeqLength(A []int) int {
 		for j := 1; j >= 0; j++ {
 			dict := array[i-j]
 			for k, v := range dict {
-
+				return k + v
 			}
 		}
 	}
+
+	return 0
 }
