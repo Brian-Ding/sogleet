@@ -3,10 +3,10 @@ package main
 import (
 	"fmt"
 
-	"../problems"
+	"github.com/Brian-Ding/sogleet/problems"
 )
 
 func main() {
-	r := problems.FindLongestChain()
+	r := problems.PartitionLabels()
 	fmt.Println(r)
 }
