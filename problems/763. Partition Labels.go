@@ -4,6 +4,18 @@ import "strings"
 
 func PartitionLabels() []int {
 	s := "ababcbacadefegdehijhklij"
+	// a:0	8
+	// b:1	5
+	// c:4	7
+	// d:9	14
+	// e:10	15
+	// f:11	11
+	// g:13	13
+	// h:16	19
+	// i:17	22
+	// j:18	23
+	// k:20	20
+	// l:21	21
 	return partitionLabels(s)
 }
 
@@ -12,6 +24,32 @@ func partitionLabels(s string) []int {
 		return make([]int, 0)
 	}
 	byteStr := []byte(s)
+	// maps := make(map[byte][]int, 0)
+	// for i := 0; i < len(s); i++ {
+	// 	v, ok := maps[byteStr[i]]
+	// 	if ok {
+	// 		maps[byteStr[i]] = []int{v[0], i}
+	// 	} else {
+	// 		maps[byteStr[i]] = []int{i, i}
+	// 	}
+	// }
+
+	// result := make([]int, 1)
+
+	// for i := 1; i < len(byteStr); i++ {
+	// 	c := byteStr[i]
+	// 	v0 := &maps[c][0]
+	// 	v1 := &maps[c][1]
+	// 	if v[0] <= max && v[1] > max {
+	// 		max = v[1]
+	// 	} else if v[0] > max && v[1] > max {
+	// 		result = append(result, max)
+	// 		max = v[1]
+	// 	}
+	// }
+
+	// return result
+
 	results := make(map[int][]int, 0)
 	results[0] = []int{0}
 
