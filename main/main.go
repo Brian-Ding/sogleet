@@ -7,6 +7,6 @@ import (
 )
 
 func main() {
-	r := problems.PartitionLabels()
+	r := problems.LastStoneWeightII()
 	fmt.Println(r)
 }
