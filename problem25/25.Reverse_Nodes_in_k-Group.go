@@ -1,18 +1,26 @@
 package problems
 
-// ReverseKGroup problem 25
-func ReverseKGroup(head *ListNode, k int) *ListNode {
-	return reverseKGroup(head, k)
+import (
+	"fmt"
+
+	common "github.com/Brian-Ding/sogleet/common"
+)
+
+func Judge() {
+	head := &common.ListNode{}
+	k := 0
+	r := reverseKGroup(head, k)
+	fmt.Println(r)
 }
 
 /**
  * Definition for singly-linked list.
  * type ListNode struct {
  *     Val int
- *     Next *ListNode
+ *     Next *common.ListNode
  * }
  */
-func reverseKGroup(head *ListNode, k int) *ListNode {
+func reverseKGroup(head *common.ListNode, k int) *common.ListNode {
 	if head == nil {
 		return nil
 	}

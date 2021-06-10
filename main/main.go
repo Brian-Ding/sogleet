@@ -1,12 +1,9 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/Brian-Ding/sogleet/problems"
+	problem "github.com/Brian-Ding/sogleet/problem1049"
 )
 
 func main() {
-	r := problems.LastStoneWeightII()
-	fmt.Println(r)
+	problem.Judge()
 }

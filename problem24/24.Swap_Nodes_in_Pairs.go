@@ -1,8 +1,15 @@
-package problems
+package problem24
 
-// SwapPairs problem 24
-func SwapPairs(head *ListNode) *ListNode {
-	return swapPairs(head)
+import (
+	"fmt"
+
+	common "github.com/Brian-Ding/sogleet/common"
+)
+
+func Judge() {
+	head := &common.ListNode{}
+	r := swapPairs(head)
+	fmt.Println(r)
 }
 
 /**
@@ -12,7 +19,7 @@ func SwapPairs(head *ListNode) *ListNode {
  *     Next *ListNode
  * }
  */
-func swapPairs(head *ListNode) *ListNode {
+func swapPairs(head *common.ListNode) *common.ListNode {
 	if head == nil {
 		return nil
 	}
@@ -23,7 +30,7 @@ func swapPairs(head *ListNode) *ListNode {
 
 	newHead := head.Next
 
-	var last *ListNode
+	var last *common.ListNode
 	next := head.Next
 
 	count := 0

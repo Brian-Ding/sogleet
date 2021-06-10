@@ -1,10 +1,14 @@
-package problems
+package problem1049
 
-import "math"
+import (
+	"fmt"
+	"math"
+)
 
-func LastStoneWeightII() int {
+func Judge() {
 	stones := []int{2, 7, 4, 1, 8, 1}
-	return lastStoneWeightII(stones)
+	r := lastStoneWeightII(stones)
+	fmt.Println(r)
 }
 
 func lastStoneWeightII(stones []int) int {
