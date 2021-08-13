@@ -25,15 +25,16 @@ func groupAnagrams(strs []string) [][]string {
 	dict := make(map[string][]string)
 
 	for _, str := range strs {
-		if len(dict) == 0 {
+		found := false
+		for key, value := range dict {
+			if compare(key, str) {
+				value = append(value, str)
+				found = true
+			}
+		}
+		if !found {
 			dict[str] = make([]string, 0)
 			dict[str] = append(dict[str], str)
-		} else {
-			for key, value := range dict {
-				if len(str) == len(key) {
-					
-				}
-			}
 		}
 	}
 
@@ -43,4 +44,13 @@ func groupAnagrams(strs []string) [][]string {
 	}
 
 	return result
+}
+
+func compare(a string, b string) bool {
+	if len(a) != len(b) {
+		return false
+	}
+
+	// eat tea
+	return false
 }
