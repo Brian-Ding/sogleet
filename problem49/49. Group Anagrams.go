@@ -1,6 +1,8 @@
 package problem49
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func Judge() {
 	// Example 1:
@@ -16,7 +18,9 @@ func Judge() {
 	// Input: strs = ["a"]
 	// Output: [["a"]]
 
-	strs := []string{"eat", "tea", "tan", "ate", "nat", "bat"}
+	//strs := []string{"eat", "tea", "tan", "ate", "nat", "bat"}
+	//strs := []string{""}
+	strs := []string{"a"}
 	result := groupAnagrams(strs)
 	fmt.Println(result)
 }
@@ -28,7 +32,7 @@ func groupAnagrams(strs []string) [][]string {
 		found := false
 		for key, value := range dict {
 			if compare(key, str) {
-				value = append(value, str)
+				dict[key] = append(value, str)
 				found = true
 			}
 		}
@@ -52,5 +56,29 @@ func compare(a string, b string) bool {
 	}
 
 	// eat tea
-	return false
+	chars := make(map[byte]int)
+	for i := 0; i < len(a); i++ {
+		if _, ok := chars[a[i]]; ok {
+			//do something here
+			chars[a[i]]++
+		} else {
+			chars[a[i]] = 1
+		}
+	}
+
+	for i := 0; i < len(b); i++ {
+		if _, ok := chars[b[i]]; ok {
+			chars[b[i]]--
+		} else {
+			return false
+		}
+	}
+
+	for _, v := range chars {
+		if v != 0 {
+			return false
+		}
+	}
+
+	return true
 }
