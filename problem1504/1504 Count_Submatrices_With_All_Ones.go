@@ -1,5 +1,7 @@
 package problems
 
+import "github.com/Brian-Ding/sogleet/common"
+
 /*
 Given a rows * columns matrix mat of ones and zeros, return how many submatrices have all ones.
 */
@@ -53,8 +55,8 @@ func numSubmat(mat [][]int) int {
 					l2 := l
 					for k := 1; i-k >= 0 && j-k >= 0; k++ {
 						p := array[i-k][j-k]
-						h = min(p.top+k, h)
-						l = min(p.left+k, l)
+						h = common.Min(p.top+k, h)
+						l = common.Min(p.left+k, l)
 
 						if mat[i-k][j-k] == 0 {
 							h2 = k - 1

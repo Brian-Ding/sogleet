@@ -15,7 +15,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func newArray(row, column, value int) [][]int {
+func NewArray(row, column, value int) [][]int {
 	array := make([][]int, 0, row)
 	for i := 0; i < row; i++ {
 		array = append(array, make([]int, 0, column))
@@ -27,7 +27,7 @@ func newArray(row, column, value int) [][]int {
 	return array
 }
 
-func min(nums ...int) int {
+func Min(nums ...int) int {
 	n := math.MaxInt64
 	for _, v := range nums {
 		if v < n {
@@ -37,7 +37,7 @@ func min(nums ...int) int {
 	return n
 }
 
-func max(nums ...int) int {
+func Max(nums ...int) int {
 	n := math.MinInt64
 	for _, v := range nums {
 		if v > n {
@@ -47,7 +47,7 @@ func max(nums ...int) int {
 	return n
 }
 
-func sum(nums ...int) int {
+func Sum(nums ...int) int {
 	result := 0
 	for _, v := range nums {
 		result += v

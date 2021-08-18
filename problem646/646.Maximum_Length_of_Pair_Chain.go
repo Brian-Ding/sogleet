@@ -1,6 +1,10 @@
 package problems
 
-import "sort"
+import (
+	"sort"
+
+	"github.com/Brian-Ding/sogleet/common"
+)
 
 // FindLongestChain problem 646
 func FindLongestChain() int {
@@ -19,7 +23,7 @@ func findLongestChain(pairs [][]int) int {
 	for i := 1; i < width; i++ {
 		for j := 0; j < i; j++ {
 			if pairs[i][0] > pairs[j][1] {
-				array[i] = max(array[i], array[j]+1)
+				array[i] = common.Max(array[i], array[j]+1)
 			}
 		}
 	}

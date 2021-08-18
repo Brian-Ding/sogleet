@@ -1,7 +1,9 @@
 package problems
 
+import "github.com/Brian-Ding/sogleet/common"
+
 // ReverseList problem 206
-func ReverseList(head *ListNode) *ListNode {
+func ReverseList(head *common.ListNode) *common.ListNode {
 	return reverseList(head)
 }
 
@@ -12,7 +14,7 @@ func ReverseList(head *ListNode) *ListNode {
  *     Next *ListNode
  * }
  */
-func reverseList(head *ListNode) *ListNode {
+func reverseList(head *common.ListNode) *common.ListNode {
 	if head == nil {
 		return nil
 	}

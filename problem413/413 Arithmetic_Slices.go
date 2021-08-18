@@ -2,6 +2,8 @@ package problems
 
 import (
 	"math"
+
+	"github.com/Brian-Ding/sogleet/common"
 )
 
 // NumberOfArithmeticSlices problem 413
@@ -11,7 +13,7 @@ func NumberOfArithmeticSlices(A []int) int {
 
 func numberOfArithmeticSlices(A []int) int {
 	row := len(A)
-	array := newArray(row, row, math.MaxInt32)
+	array := common.NewArray(row, row, math.MaxInt32)
 	count := 0
 
 	for i := 0; i < row; i++ {

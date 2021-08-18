@@ -2,6 +2,8 @@ package problems
 
 import (
 	"math"
+
+	"github.com/Brian-Ding/sogleet/common"
 )
 
 // MinHeightShelves problem 1105
@@ -24,11 +26,11 @@ func minHeightShelves(books [][]int, shelf_width int) int {
 			if totalWdith > shelf_width {
 				break
 			} else {
-				maxHeight = max(maxHeight, books[j][1])
+				maxHeight = common.Max(maxHeight, books[j][1])
 				if j-1 < 0 {
-					array[i] = min(array[i], maxHeight)
+					array[i] = common.Min(array[i], maxHeight)
 				} else {
-					array[i] = min(array[i], array[j-1]+maxHeight)
+					array[i] = common.Min(array[i], array[j-1]+maxHeight)
 				}
 			}
 		}

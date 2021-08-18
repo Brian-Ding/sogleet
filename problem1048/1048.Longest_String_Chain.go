@@ -1,6 +1,10 @@
 package problems
 
-import "sort"
+import (
+	"sort"
+
+	"github.com/Brian-Ding/sogleet/common"
+)
 
 // LongestStrChain problem 1048
 func LongestStrChain(words []string) int {
@@ -34,8 +38,8 @@ func longestStrChain(words []string) int {
 				}
 
 				if diff <= 1 {
-					array[i] = max(array[i], array[j]+1)
-					result[i] = max(result[i], array[i])
+					array[i] = common.Max(array[i], array[j]+1)
+					result[i] = common.Max(result[i], array[i])
 				}
 			}
 		}

@@ -1,5 +1,7 @@
 package problems
 
+import "github.com/Brian-Ding/sogleet/common"
+
 /*
 In a country popular for train travel, you have planned some train travelling one year in advance.
 The days of the year that you will travel is given as an array days.  Each day is an integer from 1 to 365.
@@ -26,7 +28,7 @@ func mincostTickets(days []int, costs []int) int {
 	for i := 0; i < row; i++ {
 		array = append(array, 0)
 	}
-	array[row-1] = min(costs[0], costs[1], costs[2])
+	array[row-1] = common.Min(costs[0], costs[1], costs[2])
 
 	for i := row - 2; i >= 0; i-- {
 		next7DayIndex := -1
@@ -43,9 +45,9 @@ func mincostTickets(days []int, costs []int) int {
 			}
 		}
 		if next7DayIndex == -1 { // 7-day pass works until the end
-			temp = min(temp, costs[1])
+			temp = common.Min(temp, costs[1])
 		} else {
-			temp = min(temp, costs[1]+array[next7DayIndex])
+			temp = common.Min(temp, costs[1]+array[next7DayIndex])
 		}
 
 		// buy 30-day pass on day i
@@ -56,9 +58,9 @@ func mincostTickets(days []int, costs []int) int {
 			}
 		}
 		if next30DayIndex == -1 { // 30-day pass works until the end
-			temp = min(temp, costs[2])
+			temp = common.Min(temp, costs[2])
 		} else {
-			temp = min(temp, costs[2]+array[next30DayIndex])
+			temp = common.Min(temp, costs[2]+array[next30DayIndex])
 		}
 
 		array[i] = temp

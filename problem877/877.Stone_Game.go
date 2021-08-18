@@ -2,6 +2,8 @@ package problems
 
 import (
 	"math"
+
+	"github.com/Brian-Ding/sogleet/common"
 )
 
 // StoneGame problem 877
@@ -11,8 +13,8 @@ func StoneGame(piles []int) bool {
 
 func stoneGame(piles []int) bool {
 	length := len(piles)
-	firstArray := newArray(length, length, 0)
-	secondArray := newArray(length, length, 0)
+	firstArray := common.NewArray(length, length, 0)
+	secondArray := common.NewArray(length, length, 0)
 
 	for i := 0; i < length; i++ {
 		firstArray[i][i] = piles[i]

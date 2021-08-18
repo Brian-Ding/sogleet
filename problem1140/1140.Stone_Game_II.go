@@ -1,5 +1,7 @@
 package problems
 
+import "github.com/Brian-Ding/sogleet/common"
+
 // StoneGameII problem 1140
 func StoneGameII(piles []int) int {
 	return stoneGameII(piles)
@@ -8,27 +10,27 @@ func StoneGameII(piles []int) int {
 // not passed
 func stoneGameII(piles []int) int {
 	if len(piles) <= 2 {
-		return sum(piles...)
+		return common.Sum(piles...)
 	}
 
 	row := len(piles)
 	column := row/2 + 2
-	result := newArray(row, column, 0)
+	result := common.NewArray(row, column, 0)
 	for i := 0; i < row; i++ {
 		for m := 1; m < column; m++ {
 			if row-i <= 2*m {
-				result[i][m] = sum(piles[i:]...)
+				result[i][m] = common.Sum(piles[i:]...)
 			}
 		}
 	}
 
 	for i := row - 1; i >= 0; i-- {
 		for m := 1; m < column && row-i > 2*m; m++ {
-			take := sum(piles[i:]...)
+			take := common.Sum(piles[i:]...)
 			for x := m; x <= 2*m && x < column; x++ {
-				take = min(take, result[i+x][max(x, m)])
+				take = common.Min(take, result[i+x][common.Max(x, m)])
 			}
-			result[i][m] = sum(piles[i:]...) - take
+			result[i][m] = common.Sum(piles[i:]...) - take
 		}
 	}
 

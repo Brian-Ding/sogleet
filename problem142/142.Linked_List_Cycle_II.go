@@ -1,8 +1,10 @@
 package problems
 
+import "github.com/Brian-Ding/sogleet/common"
+
 // DetectCycle problem 142
 // not pass
-func DetectCycle(head *ListNode) *ListNode {
+func DetectCycle(head *common.ListNode) *common.ListNode {
 	return detectCycle(head)
 }
 
@@ -13,7 +15,7 @@ func DetectCycle(head *ListNode) *ListNode {
  *     Next *ListNode
  * }
  */
-func detectCycle(head *ListNode) *ListNode {
+func detectCycle(head *common.ListNode) *common.ListNode {
 	fast := head
 	slow := head
 

@@ -2,10 +2,12 @@ package problems
 
 import (
 	"math"
+
+	"github.com/Brian-Ding/sogleet/common"
 )
 
 // HasCycle problem 141
-func HasCycle(head *ListNode) bool {
+func HasCycle(head *common.ListNode) bool {
 	return hasCycle(head)
 }
 
@@ -16,8 +18,8 @@ func HasCycle(head *ListNode) bool {
  *     Next *ListNode
  * }
  */
-func hasCycle(head *ListNode) bool {
-	maxNode := &ListNode{Val: math.MaxInt32}
+func hasCycle(head *common.ListNode) bool {
+	maxNode := &common.ListNode{Val: math.MaxInt32}
 
 	current := head
 	for current != nil {
