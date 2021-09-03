@@ -1,7 +1,7 @@
 package main
 
 import (
-	problem "github.com/Brian-Ding/sogleet/problem199"
+	problem "github.com/Brian-Ding/sogleet/problem200"
 )
 
 func main() {
